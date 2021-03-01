@@ -4,12 +4,193 @@
 		<meta charset="utf-8">
 		<title>Assignment2</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script type="text/javascript" src="index.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 	</head>
 	<body>
 		<!-- Your Assignment2 HTML Structure Here  -->
 		
-		<!-- load script after body elements, feel free to play around with this -->
+		<!-- This is the code for the navigation bar-->
 		<script type="text/javascript" src="index.js"></script>
+		<div class="container">
+			<nav class="menubar" role=navigation>
+				<a id ="skip" href=”#content-left”>Jump to Profile Picture</a>
+				<a  id ="skip" href=”#content-right”>Jump to Who to Follow</a>
+				<a id ="skip" href=”#content-center”>Jump to Tweets</a>
+				<div class = "menubar-left">
+	
+					<a class="menubar-home" href="index.html">
+						<i class="fas fa-home icon">Home</i>
+
+					</a>
+	
+					<a class="menubar-moments" href="#">
+						<i class="fas fa-hashtag icon">Moments </i>
+					</a>
+	
+					<a class="menubar-notifications" href="#">
+						<i class="far fa-bell icon">Notifications </i>
+					</a>
+	
+					<a class="menubar-envelop" href="#">
+						<i class="far fa-envelope icon">Messages</i>
+					</a>
+	
+				</div>
+				<div class="menubar-logo">
+					<a  href="index.html">
+						<span class="logo"><img src="./img/twitter-logo.png" alt="myTwitter" height="26"></span>
+					</a>
+				</div>
+				<div class="tweet-btn">Tweet</div>
+			</nav>
+		
+		<div class="content-wrapper">
+			<!-- Content-left where the profile picture and name is displayed-->
+			<div class = "content-left" >
+				<div class = "cover-picture">
+			    	<div class="banner">Ratatouille</div>
+				</div>
+				<div class = "profile-picture">
+					<img src="./img/ratatouille.jpg" class="profile-pic" alt="Remy Profile">
+					<div class = "profile-info">
+						<span style='font-weight:bold' class="font-weight-bold"> Remy </span>
+						<span class="font-weight-light"> @remy </span>
+					</div>
+				</div>
+				<div class = "profile-stats">
+					<div class = "stats">
+						<span class= "words"> Tweets </span>
+						<span class = "nums"> 5049 </span>
+					</div>
+	
+					<div class = "stats">
+						<span class= "words"> Following </span>
+						<span class = "nums"> 324 </span>
+					</div>
+	
+					<div class = "stats">
+						<span class= "words"> Followers </span>
+						<span class = "nums"> 809 </span>
+					</div>
+				</div>
+			</div>
+			<div class ="content-center">
+				<label> Search
+					<input id="searchBar" type="search" placeholder="Search in tweets">
+				</label>
+			
+			   
+			  <input onclick="pause()" type="button" value="click to pause feed" id="btn"> 
+			  <!-- <div class="wrapper"></div> -->
+			  <div id="tweet-container" role=main>
+				
+					<ul style="list-style-type:none">
+					
+						<li>
+							<div class="post">
+								<img id="rat" src="./img/ratatouille.jpg" alt="ratatouille">
+								<div class="tweet">
+									
+									<div class="name">
+										<span style="font-weight:bold" class="username">Remy</span>
+										<span class="screenname">@remy</span>
+										<span class="date">Nov 19</span>
+									</div>	
+									<p id="post-info"> Let's make some pasta!</p>
+								</div>
+							
+							</div>
+						</li>
+						<li>
+							<div class="post">
+								<img id="rat" src="./img/ratatouille.jpg" alt="ratatouille">
+								<div class="tweet">
+									
+									<div class="name">
+										<span style="font-weight:bold" class="username">Remy</span>
+										<span class="screenname">@remy</span>
+										<span class="date">Nov 19</span>
+									</div>	
+									<p id="post-info"> Let's make some pasta!</p>
+								</div>
+							
+							</div>
+						</li>
+						<li>
+							<div class="post">
+								<img id="rat" src="./img/ratatouille.jpg" alt="ratatouille">
+								<div class="tweet">
+									
+									<div class="name">
+										<span style="font-weight:bold" class="username">Remy</span>
+										<span class="screenname">@remy</span>
+										<span class="date">Nov 19</span>
+									</div>	
+									<p id="post-info"> It's 2007. You just got home from elementary school. Your mom has pizza bagels in the oven. Ratatouille is in theaters. Life is good.</p>
+								</div>
+							
+							</div>
+						</li>
+						<li>
+							<div class="post">
+								<img id="rat" src="./img/ratatouille.jpg" alt="ratatouille">
+								<div class="tweet">
+									
+									<div class="name">
+										<span style="font-weight:bold" class="username">Remy</span>
+										<span class="screenname">@remy</span>
+										<span class="date">Nov 19</span>
+									</div>	
+									<p id="post-info"> Let's make some pasta!</p>
+								</div>
+							
+							</div>
+						</li>
+						<li>
+							<div class="post">
+								<img id="rat" src="./img/ratatouille.jpg" alt="ratatouille">
+								<div class="tweet">
+									
+									<div class="name">
+										<span style="font-weight:bold" class="username">Remy</span>
+										<span class="screenname">@remy</span>
+										<span class="date">Nov 19</span>
+									</div>	
+									<p id="post-info"> Let's make some pasta!</p>
+								</div>
+							
+							</div>
+						</li>
+					</ul>
+		
+					
+			</div>
+			</div>
+			<div class = "content-right">
+				<span class="WhotoFollow"><strong>Who to follow</strong></span>
+				<div class="follow">
+					<div class = "div-image"><img src="./img/images/linguini.png" class="follow-pic" alt="Linguini Profile"></div>
+					<div class = "follow-info">
+						<span class="font-weight-bold"> Linguini </span>
+						<span class="font-weight-light"> @linguini </span>
+						<div class="follow-button">Follow
+						</div>
+					</div>
+				</div>
+	
+				<div class="follow">
+					<div class = "div-image"><img src="./img/ratatouille.jpg" class="follow-pic" alt="Ratatouille Profile"></div>
+					<div class = "follow-info">
+						<span class="font-weight-bold"> CS132 TA</span>
+						<span class="font-weight-light"> @cs132ta </span>
+						<div class="follow-button">Follow
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	</body>
 </html>
