@@ -13,37 +13,35 @@
 		
 		<!-- This is the code for the navigation bar-->
 		<script type="text/javascript" src="index.js"></script>
-		<div class="container">
-			<nav class="menubar" role=navigation>
-				<a id ="skip" href=”#content-left”>Jump to Profile Picture</a>
-				<a  id ="skip" href=”#content-right”>Jump to Who to Follow</a>
-				<a id ="skip" href=”#content-center”>Jump to Tweets</a>
-				<div class = "menubar-left">
-	
-					<a class="menubar-home" href="index.html">
-						<i class="fas fa-home icon">Home</i>
+		<div class="header">
+			<nav class="nav" role=navigation>
 
+				<a class ="skip" href=”#content-center”>Skip to Tweets</a>
+
+				<div class = "nav-left">
+	
+					<a class="nav-home" href="#">
+						<i class="fas fa-home icon">Home</i>
 					</a>
 	
-					<a class="menubar-moments" href="#">
+					<a class="nav-moments" href="#">
 						<i class="fas fa-hashtag icon">Moments </i>
 					</a>
 	
-					<a class="menubar-notifications" href="#">
+					<a class="nav-notifications" href="#">
 						<i class="far fa-bell icon">Notifications </i>
 					</a>
 	
-					<a class="menubar-envelop" href="#">
+					<a class="nav-messages" href="#">
 						<i class="far fa-envelope icon">Messages</i>
 					</a>
 	
 				</div>
-				<div class="menubar-logo">
-					<a  href="index.html">
-						<span class="logo"><img src="./img/twitter-logo.png" alt="myTwitter" height="26"></span>
-					</a>
-				</div>
-				<div class="tweet-btn">Tweet</div>
+					<div class="nav-center">
+						<span>
+					<img id="logo"  src="./img/twitter-logo.png" alt="twitter logo"></span>
+						</div>
+				<div class="nav-right">Tweet</div>
 			</nav>
 		
 		<div class="content-wrapper">
@@ -53,26 +51,26 @@
 			    	<div class="banner">Ratatouille</div>
 				</div>
 				<div class = "profile-picture">
-					<img src="./img/ratatouille.jpg" class="profile-pic" alt="Remy Profile">
+					<img src="./img/ratatouille.jpg" alt="Remy Profile">
 					<div class = "profile-info">
-						<span style='font-weight:bold' class="font-weight-bold"> Remy </span>
-						<span class="font-weight-light"> @remy </span>
+						<span class="font-weight-bold"> Remy </span>
+						<span> @remy </span>
 					</div>
 				</div>
 				<div class = "profile-stats">
 					<div class = "stats">
-						<span class= "words"> Tweets </span>
-						<span class = "nums"> 5049 </span>
+						<span class= "profile-words"> Tweets </span>
+						<span class = "profile-num"> 5049 </span>
 					</div>
 	
 					<div class = "stats">
-						<span class= "words"> Following </span>
-						<span class = "nums"> 324 </span>
+						<span class= "profile-words"> Following </span>
+						<span class = "profile-num"> 324 </span>
 					</div>
 	
 					<div class = "stats">
-						<span class= "words"> Followers </span>
-						<span class = "nums"> 809 </span>
+						<span class= "profile-words"> Followers </span>
+						<span class = "profile-num"> 809 </span>
 					</div>
 				</div>
 			</div>
@@ -82,7 +80,7 @@
 				</label>
 			
 			   
-			  <input onclick="pause()" type="button" value="click to pause feed" id="btn"> 
+			  <input onclick="pause" type="button" value="click to pause feed" id="btn"> 
 			  <!-- <div class="wrapper"></div> -->
 			  <div id="tweet-container" role=main>
 				
@@ -169,10 +167,10 @@
 			</div>
 			</div>
 			<div class = "content-right">
-				<span class="WhotoFollow"><strong>Who to follow</strong></span>
+				<span class="whotofollow"><b>Who to follow</b></span>
 				<div class="follow">
-					<div class = "div-image"><img src="./img/images/linguini.png" class="follow-pic" alt="Linguini Profile"></div>
-					<div class = "follow-info">
+					<img src="./img/images/linguini.png" alt="Profile picture">
+					<div>
 						<span class="font-weight-bold"> Linguini </span>
 						<span class="font-weight-light"> @linguini </span>
 						<div class="follow-button">Follow
@@ -181,8 +179,8 @@
 				</div>
 	
 				<div class="follow">
-					<div class = "div-image"><img src="./img/ratatouille.jpg" class="follow-pic" alt="Ratatouille Profile"></div>
-					<div class = "follow-info">
+					<img src="./img/ratatouille.jpg" alt="Profile picture">
+					<div>
 						<span class="font-weight-bold"> CS132 TA</span>
 						<span class="font-weight-light"> @cs132ta </span>
 						<div class="follow-button">Follow

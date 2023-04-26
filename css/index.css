@@ -2,37 +2,36 @@
 /* Feel free to edit CSS of body if you'd like. We provide you the light gray background color and font family in the body styling */
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    /* margin: 0; */
     margin: 20px 40px;
     background-color: white;
   }
   
 
-  .container{
+  .header{
     background-color: #e6ecf0;
     
   }
-  /* CSS for navigation bar*/
-  .menubar {
+
+  .nav {
   display:flex;
   flex: 1;
   justify-content: space-between;
   background-color: white
 
 }
-#skip{
+.skip{
   display:none;
 }
 
-.menubar-home:hover,.menubar-moments:hover,.menubar-notifications:hover, .menubar-envelop:hover  {
-  color:blue;
-  border-bottom: 2px solid rgb(26, 145,218);
-  text-decoration: none;
+.nav-home:hover,.nav-moments:hover,.nav-notifications:hover, .nav-messages:hover  {
+  color:#4AB3F4;
+  border-bottom: 3px solid #4AB3F4;
+  
 }
-.menubar-home,.menubar-moments,.menubar-notifications, .menubar-envelop  {
-
+.nav-home,.nav-moments,.nav-notifications, .nav-messages  {
+  font-weight: bold;
   color:grey;
-  padding: 20px;
+  padding: 15px;
 }
 .icon {
 
@@ -42,21 +41,22 @@ body {
   font-weight: bold;
   font-style: normal;
 }
-.menubar-logo {
+.nav-center {
   position: absolute;
   margin: 0 auto;
   left: 50%;
 }
 
-.tweet-btn {
+.nav-right {
   background-color: #4AB3F4;
-  border-color: #4AB3F4;
-  width: 66px;
-  height: 26px;
+  width: 80px;
+  height: 30px;
   color: white;
-  border: 2px solid;
-  border-radius: 25px;
+  border-radius: 30px;
   text-align: center;
+}
+#logo{
+  height:30px
 }
 #btn {
   background-color: #4AB3F4;
@@ -68,18 +68,19 @@ body {
     margin:56px auto;
     margin-bottom: 20px;
   }
-  /* Content-left that displays profile picture and profile stats*/
-  .content-left{
-    width: 290px;
-    border: 5px solid #E6ECF0;
+
+  .content-left{ 
     order: 1;
+    width: 290px;
+    
   }
   
   .cover-picture {
-    width:inherit;
-    height:96px;
-    background-color: black;
     z-index: 1;
+    width:290px;
+    height:100px;
+    background-color: black;
+    
     
   }
   .banner{
@@ -91,12 +92,11 @@ body {
   }
   .profile-picture {
     display: flex;
-    width:inherit;
-    top: 120;
-    left: 20;
-    height:96px;
-    background-color: white;
     z-index: 3;
+    width:290px;
+    height:100px;
+    background-color: white;
+    
   }
   .profile-picture img{
     width:60px;
@@ -108,25 +108,26 @@ body {
   }
   .profile-stats{
     display: flex;
-    align-items: center;
-    width: inherit;
-    justify-content: space-around;
     z-index: 1;
+    align-items: center;
+    width: 290px;
     background-color: white;
     padding: 5px;
-    height: 96px;
+    height: 40px;
   }
   
-  .words {
+  .profile-words {
+    padding: 5px;
     color: grey;
     font-weight: bold;
   }
-  .nums {
+  .profile-num {
+ 
     color: #4AB3F4;
     font-weight: bold;
   }
   
-  /* CSS for content-center where tweets are displayed*/
+ 
   .content-center {
     display: flex;
     justify-content: space-between;
@@ -135,6 +136,9 @@ body {
     order:2;
     flex: 1;
     
+  }
+  .font-weight-bold{
+    font-weight:bold
   }
   #tweet-container{
 
@@ -157,7 +161,7 @@ body {
     justify-content: space-between;
     min-width: 500px;
     max-width: 500px;
-    /* flex: 1; */
+    
   }
   #tweet-container img {
     width: 48px;
@@ -171,11 +175,6 @@ body {
     display: inline-block;
     padding: 5px;
   }
-  span {
-    font-weight: lighter;
-    justify-content: space-between;
-    font: Arial;
-  }
  
   #post-info{
     color: black;
@@ -187,44 +186,42 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
+.whotofollow{
+  padding-top: 0px;
+}
 
-/* CSS for content-right containing Who to Follow box*/
 .content-right {
+  order: 3;
   background-color: white;
   width: 290px;
-  border: 5px solid #E6ECF0;
-  order: 3;
-  height: 190px;
+  height: 220px;
 
 }
 .content-right img{
-  width:45px;
-  height:45px;
+  width:40px;
+  height:40px;
   border-radius: 50%;
-  border: 1px solid white;
   margin-left: 10px;
   margin-top: 10px;
 }
 .follow {
-  border-bottom: 1px solid #E6ECF0;
   height: 80px;
-  width: inherit;
+  width: 290px;
+  border-bottom: 1px solid whitesmoke;
   display: inline-flex;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .follow-button {
-  background-color: white;
   border-color: #4AB3F4;
-  border: 1.5px solid;
   color: #4AB3F4;
   text-align: center;
-  border-radius: 25px;
-  width: 85px;
-  height: 30px;
+  border-radius: 30px;
+  width: 75px;
+  height: 25px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1190px) {
   .content-right {
     display: none;
   }
